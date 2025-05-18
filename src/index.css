@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-100;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-[#F8B817] text-white hover:bg-[#e6a915];
+  }
+  
+  .btn-secondary {
+    @apply bg-[#31A7BC] text-white hover:bg-[#2590a3];
+  }
+}
+
+/* Subtle animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .transition-status {
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
